@@ -1,0 +1,40 @@
+#cntnr{
+    height: 800px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right,#dc96cc,rgb(208, 202, 118)) ;
+}
+#Todo{
+    width: 300px;
+    padding: 10px;
+    border: 2px solid rgb(243, 6, 6);
+    border-radius: 2px;
+
+}
+.btn{
+    padding: 30px;
+    display: flex;
+}
+div{
+    padding: 20px;
+}
+button{
+    padding: 10px;
+    border: 2px solid rgb(1, 1, 1);
+    border-radius: 5px;
+}
+
+#listCtnr{
+    width: 300px;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+#items-list li {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Change the font */
+    font-size: 30px; /* Adjust the size */
+    color: #003b8e; /* Change the text color */
+  }
+  

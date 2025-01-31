@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: rgb(129, 154, 190);
+  padding: 10px;
+}
+
+header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+header .header-container img {
+  height: 24px;
+  width: 24px;
+  margin-right: 7px;
+}
+
+header .header-container h1 {
+  font-size: 14.46px;
+  font-weight: 500;
+}
+
+article {
+  display: flex;
+  width: 470px;
+  height: 168px;
+  top: 100px;
+  left: 40px;
+  padding: 40px 0px 0px 40px;
+  gap: 19px;
+  opacity: 0px;
+}
+
+article .img-container {
+  width: 125px;
+  height: 168px;
+  flex-shrink: 0;
+}
+
+article .img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+article .content-container img {
+  width: 12px;
+  height: 12px;
+  top: 120px;
+  left: 184px;
+  padding: 0;
+  gap: 0px;
+  opacity: 0px;
+}
+
+article .content-container .heading-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+article .content-container span {
+  font-size: 10.24px;
+  font-weight: 400;
+  line-height: 12.39px;
+  letter-spacing: 0.17em;
+  padding-right: 4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+article .content-container a {
+  font-size: 10.24px;
+  font-weight: 400;
+  line-height: 12.39px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #918e9b;
+}
+
+article .content-container h1 {
+  color: #2b283a;
+  width: 326px;
+  height: 30px;
+  gap: 0px;
+  opacity: 0px;
+  margin: 0 0;
+
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30.26px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+article .content-container h2 {
+  color: #2b283a;
+  width: 319px;
+  height: 11px;
+  padding-top: 6px;
+  margin-bottom: 0;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 10.24px;
+  font-weight: 700;
+  line-height: 12.39px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+article .content-container p {
+  width: 326px;
+  height: 45px;
+  top: 203px;
+  left: 184px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 10.24px;
+  font-weight: 400;
+  line-height: 15.36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+header a img {
+  width: 130px;
+  padding-left: 30px;
+}
+
+header .box-container {
+  width: 616px;
+  height: 20px;
+  padding: 8px;
+  border: 2px solid rgb(53, 51, 51);
+  border-radius: 25px;
+}
+
+header img {
+  width: 30px;
+  padding-right: 50px;
+}
+
+main .img-container {
+  display: flex;
+  padding: 70px 82px 0px 82px;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+main .cover-photo {
+  height: 206.975px;
+  width: 1200.85px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+main .channel-container {
+  display: flex;
+  width: 1200.85px;
+  gap: 19px;
+  padding: 16px 81.7px 4px 160px;
+}
+
+main .channel-container .channel-img .channel-logo {
+  border-radius: 100px;
+}
+
+main .channel-container .channel-info h1 {
+  margin: 0px 0px 7px 0px;
+  font-weight: 700;
+  font-size: 36px;
+}
+main .channel-container .channel-info p {
+  color: rgb(96, 96, 96);
+  margin: 0px 0px 7px 0px;
+  font-weight: 400;
+  font-size: 16px;
+}
+main .channel-container .channel-info span {
+  color: rgb(19, 19, 19);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main .channel-container .channel-info input {
+  background-color: rgb(251, 20, 20);
+  color: rgb(255, 255, 255);
+  width: 150.462px;
+  height: 36px;
+  margin-top: 20px;
+  border-radius: 18px;
+  border: rgb(251, 20, 20);
+  font-size: 115%;
+}
+
+.components-container {
+  max-width: 1200.85px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px 10px 0px 0px;
+  box-sizing: border-box;
+}
+
+content .video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+content > a {
+  text-decoration: none;
+}
+
+content .video-container .video-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+content .video-container span {
+  color: rgb(15, 15, 15);
+  font-size: 14px;
+  font-weight: 500;
+}
+content .video-container .view-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  color: rgb(96, 96, 96);
+  font-size: 12px;
+  font-weight: 400;
+}

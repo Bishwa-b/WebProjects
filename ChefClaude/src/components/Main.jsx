@@ -3,7 +3,7 @@ import ClaudeRecipe from './ClaudeRecipe.jsx';
 import IngredientsList from './IngredientsList.jsx';
 import { getRecipeFromMistral } from '../ai.js'
 
-export default function Main() {
+export default function Main(props) {
   const [itemsList, setItemsList] = React.useState([]);
 
   const [recipe, setRecipe] = React.useState("");
@@ -19,7 +19,7 @@ export default function Main() {
   }
 
   return (
-    <main>
+    <main className={props.mode ? 'main-dark' : 'main-light'}>
       <form action={addIngredient}>
         <input
           type="text"

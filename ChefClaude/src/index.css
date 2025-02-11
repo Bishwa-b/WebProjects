@@ -2,7 +2,17 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  
+}
+
+.Light-mode{
   background-color: #fafaf8;
+  color: #000000;
+}
+
+.Dark-mode{
+  background-color: #1c1c1c;
+  color: #ffffff;
 }
 
 /* Container to unify widths and centering */
@@ -13,10 +23,21 @@ body {
   box-sizing: border-box;
 }
 
-/* Header */
-header {
-  background-color: #fff;
+section{
+  min-height: 100vh;
   width: 100%;
+}
+/* Header */
+
+header.header-light{
+  background: #ffffff;
+}
+header.header-dark{
+  background: #121212;
+}
+
+header {
+  
   height: 111px;
   padding: 24px 16px;
   display: flex;
@@ -24,6 +45,10 @@ header {
   justify-content: center;
   gap: 10px;
   box-shadow: 0px 1px 2px 0px #0000000f, 0px 1px 3px 0px #0000001a;
+}
+header.header-dark{
+  box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.06), 0px 1px 3px 0px rgba(255, 255, 255, 0.1);
+
 }
 
 header img {
@@ -43,13 +68,60 @@ header h1 {
   letter-spacing: -0.05em;
   text-align: left;
 }
+.bgButton {
+  background-color: #141413;
+  border: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.header-dark .bgButton{
+  background-color: #ffffff ;
+  
+}
 
+/* 🎨 Hover Effect */
+.bgButton:hover {
+  background: #e6e0e0;
+  transform: scale(1.05);
+}
+.Dark-mode .bgButton:hover {
+  background: #131f1f;
+  transform: scale(1.05);
+}
+
+/* 🎨 Dark Mode Icon */
+.modes {
+  width: 23px;
+  height: 23px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 🎨 Icon Hover Effect */
+.modes:hover {
+  transform: scale(1.1);
+}
+/*main .main-light{
+  background-color: #fafaf8;
+}
+main .main-dark{
+  background-color: #5a5a5a;
+}*/
 /* Main Form */
 main form {
   width: 100%;
   max-width: 594px;
   height: 38px;
-  margin: 72px auto;
+  margin: auto;
+  padding: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +137,7 @@ main form input {
   padding: 9px 13px;
   border: 1px solid #d1d5db;
   border-radius: 20px;
-  box-shadow: 0px 1px 2px 0px #0000000d;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -86,7 +158,13 @@ main form button {
   width: 190px;
   height: 57.6px;
   padding: 9px 17px;
+  border: none;
   border-radius: 20px;
+  cursor: pointer;
+}
+main.main-dark form button {
+  background: #42423e;
+  
 }
 
 main form button span {
@@ -119,7 +197,7 @@ ul.ingredients-list {
 }
 
 ul.ingredients-list > li {
-  color: #475467;
+  /*color: #475467;*/
   line-height: 28px;
 }
 
@@ -130,6 +208,7 @@ ul.ingredients-list > li {
   align-items: center;
   border-radius: 8px;
   background: #f0efeb;
+  color: #000000;
   padding: 10px 28px;
 }
 
@@ -140,7 +219,7 @@ ul.ingredients-list > li {
 }
 
 .get-recipe-container p {
-  color: #6b7280;
+  /*color: #6b7280;*/
   font-size: 0.875rem;
   line-height: 20px;
 }
@@ -157,7 +236,7 @@ ul.ingredients-list > li {
 }
 
 .suggested-recipe-container {
-  color: #475467;
+  /*color: #475467;*/
   line-height: 28px;
   font-size: 1.125rem;
   font-weight: 400;

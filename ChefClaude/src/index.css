@@ -26,6 +26,7 @@ body {
 section{
   min-height: 100vh;
   width: 100%;
+  transition: background-color 0.40s ease-in-out;
 }
 /* Header */
 
@@ -249,4 +250,11 @@ ul.ingredients-list > li {
 .suggested-recipe-container ul li,
 .suggested-recipe-container ol li {
   margin-bottom: 8px;
+}
+
+main form input,
+main form button,
+.get-recipe-container,
+.suggested-recipe-container {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
 }

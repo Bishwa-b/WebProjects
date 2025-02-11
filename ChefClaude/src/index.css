@@ -291,9 +291,9 @@ main form button,
   }
   main form {
     flex-direction: column;
-    max-width: 100%;  /* Override form container to full width */
+    max-width: 70%;  /* Override form container to full width */
     margin: 0;        /* Remove auto margins so it spans edge-to-edge */
-    padding: 24px 16px;
+    padding: 50px;
   }
   main form input,
   main form button {

@@ -3,16 +3,19 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   
+  
 }
 
 .Light-mode{
   background-color: #fafaf8;
   color: #000000;
+  
 }
 
 .Dark-mode{
   background-color: #1c1c1c;
   color: #ffffff;
+  
 }
 
 /* Container to unify widths and centering */
@@ -72,7 +75,7 @@ header h1 {
 .bgButton {
   background-color: #141413;
   border: none;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1000;
@@ -118,7 +121,6 @@ main .main-dark{
 }*/
 /* Main Form */
 main form {
-  width: 100%;
   max-width: 594px;
   height: 38px;
   margin: auto;
@@ -156,7 +158,8 @@ main form input::placeholder {
 
 main form button {
   background: #141413;
-  width: 190px;
+  min-width: 150px;
+  max-width: 190px;
   height: 57.6px;
   padding: 9px 17px;
   border: none;
@@ -257,4 +260,48 @@ main form button,
 .get-recipe-container,
 .suggested-recipe-container {
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 90px;
+    padding: 16px 12px;
+  }
+  header h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  main form {
+    padding: 40px 16px;
+    gap: 8px;
+  }
+  .get-recipe-container {
+    padding: 10px 16px;
+  }
+}
+
+/* For small screens/mobiles */
+@media (max-width: 480px) {
+  header {
+    height: 70px;
+    padding: 12px 8px;
+  }
+  header h1 {
+    font-size: 22px;
+  }
+  main form {
+    flex-direction: column;
+    max-width: 100%;  /* Override form container to full width */
+    margin: 0;        /* Remove auto margins so it spans edge-to-edge */
+    padding: 24px 16px;
+  }
+  main form input,
+  main form button {
+    width: 100%;      /* Make input and button use full width */
+    max-width: 100%;
+  }
+  .get-recipe-container {
+    flex-direction: column;
+    gap: 8px;
+  }
 }

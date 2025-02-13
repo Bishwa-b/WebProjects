@@ -6,7 +6,7 @@ export default function Entry(props) {
       </div>
       <div className="content-container">
         <div className="heading-container">
-          <img src="src/assets/location-pin.png" alt="pin" />
+          <img src="/location-pin.png" alt="pin" />
 
           <span>{props.country}</span>
           <a href={props.googleMapsLink} target="_blank">

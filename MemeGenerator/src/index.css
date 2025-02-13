@@ -6,7 +6,7 @@
 body {
   font-family: 'Karla', sans-serif;
   margin: 0;
-  background-image: url(doge.jpg);
+  background-image: url('/doge.jpg');
 }
 
 main {

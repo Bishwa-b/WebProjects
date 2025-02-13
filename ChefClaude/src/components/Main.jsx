@@ -7,7 +7,13 @@ export default function Main(props) {
   const [itemsList, setItemsList] = React.useState([]);
 
   const [recipe, setRecipe] = React.useState("");
+  
+  const recipeSection = React.useRef(null);
 
+  React.useEffect(() => {
+    recipeSection.current.scrollIntoView()
+  },[recipe])
+  
   function addIngredient(formData) {
     const newIngredient = formData.get('ingredient');
     setItemsList((prevItems) => [...prevItems, newIngredient]);
@@ -33,7 +39,7 @@ export default function Main(props) {
       </form>
 
       {itemsList.length > 0 && (
-        <IngredientsList items={itemsList} getRecipe={getRecipe} />
+        <IngredientsList ref={recipeSection} items={itemsList} getRecipe={getRecipe} />
       )}
       {recipe && (<ClaudeRecipe recipe={recipe} />)}
     </main>

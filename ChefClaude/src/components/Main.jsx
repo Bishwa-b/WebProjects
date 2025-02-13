@@ -11,7 +11,9 @@ export default function Main(props) {
   const recipeSection = React.useRef(null);
 
   React.useEffect(() => {
+    if(recipe !=='' && recipeSection !== null){
     recipeSection.current.scrollIntoView()
+    }
   },[recipe])
   
   function addIngredient(formData) {

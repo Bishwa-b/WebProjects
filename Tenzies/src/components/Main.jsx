@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState,useEffect,useRef } from 'react';
 import Die from './Die.jsx';
 import WinnerConfetti from './winner.jsx';
 export default function Main() {
   const [dice, setDice] = useState(() => generateAllNewDices());
-
+  const buttonWon = useRef(null)
   function generateAllNewDices() {
     const randomArray = [];
     for (let i = 0; i < 10; i++) {
@@ -50,6 +50,11 @@ export default function Main() {
     }
     return cnt === 10 ? true : null;
   }
+  useEffect(()=>{
+    if(winner(dice)){
+      buttonWon.current.focus()
+    }
+  },[winner(dice)])
   function newGame() {
     setDice(() => generateAllNewDices());
   }
@@ -62,7 +67,7 @@ export default function Main() {
         current value between rolls.
       </div>
       <div className="dices">{getDieArray}</div>
-      <button onClick={clickFunction} className="roll">
+      <button ref={buttonWon} onClick={clickFunction} className="roll">
         <span>{winner(dice) ? 'New Game' : 'Roll'}</span>
       </button>
       {winner(dice) && <WinnerConfetti />}

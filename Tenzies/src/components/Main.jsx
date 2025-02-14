@@ -44,11 +44,10 @@ export default function Main() {
   }
 
   function winner(dice) {
-    let cnt = 0;
-    for (let i = 0; i < dice.length; i++) {
-      dice[i].isHeld && (cnt = cnt + 1);
-    }
-    return cnt === 10 ? true : null;
+    return (
+      dice.every((die) => die.isHeld) &&
+      dice.every((die) => die.value === dice[0].value)
+    );
   }
   useEffect(()=>{
     if(winner(dice)){

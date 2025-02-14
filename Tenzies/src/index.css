@@ -1,0 +1,263 @@
+/* Global reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body: center everything and set basic typography */
+body {
+  font-family: 'Karla', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #4facfe,
+    #ff9a9e,
+    #ffdde1,
+    #00c9a7,
+    #8e44ad
+  );
+  background-size: 400% 400%;
+  animation: rotateColors 30s infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+@keyframes rotateColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Root: a full-width wrapper */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container: responsive width, background and padding */
+.container {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 360px;
+  background: #0b2434;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Main: game board with light background */
+.container main {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Content: central column for game elements */
+.container main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading styling */
+.container main .content .heading {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #2b283a;
+}
+
+/* Paragraph styling */
+.container main .content .para {
+  margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #4a4e74;
+}
+
+/* Dice grid styling */
+.container main .content .dices {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+/* Individual dice button styling */
+.container main .content .dices > button {
+  background: #59e391;
+  color: #2b283a;
+  width: 40px;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Dice number styling */
+.container main .content .dices > button > span {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+}
+
+/* Roll button styling */
+.container main .content .roll {
+  width: 100%;
+  padding: 0.7rem;
+  background: #5035ff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  margin-top: 1rem;
+}
+
+/* Roll button text styling */
+.container main .content .roll > span {
+  font-family: 'Karla', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+/* Smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    max-width: 300px;
+    padding: 0.8rem;
+  }
+
+  .container main {
+    padding: 1rem;
+  }
+
+  .container main .content .heading {
+    font-size: 1.4rem;
+  }
+
+  .container main .content .para {
+    font-size: 0.75rem;
+  }
+
+  .container main .content .dices {
+    gap: 13px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .container main .content .dices > button {
+    width: 30px;
+    padding: 0.3rem;
+  }
+
+  .container main .content .dices > button > span {
+    font-size: 1rem;
+  }
+
+  .container main .content .roll {
+    padding: 0.5rem;
+  }
+
+  .container main .content .roll > span {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (min-width: 481px) and (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 400px;
+    padding: 1rem;
+  }
+
+  .container main {
+    padding: 1.2rem;
+  }
+
+  .container main .content .heading {
+    font-size: 1.8rem;
+  }
+
+  .container main .content .para {
+    font-size: 0.85rem;
+  }
+
+  .container main .content .dices > button {
+    width: 45px;
+    padding: 0.4rem;
+  }
+
+  .container main .content .dices > button > span {
+    font-size: 1.4rem;
+  }
+
+  .container main .content .roll {
+    padding: 0.7rem;
+  }
+
+  .container main .content .roll > span {
+    font-size: 1rem;
+  }
+}
+
+/* Laptops and larger screens (min-width: 769px) */
+@media (min-width: 769px) {
+  .container {
+    max-width: 500px;
+    padding: 1.2rem;
+  }
+
+  .container main {
+    padding: 1.5rem;
+  }
+
+  .container main .content .heading {
+    font-size: 2rem;
+  }
+
+  .container main .content .para {
+    font-size: 0.9rem;
+  }
+
+  .container main .content .dices {
+    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .container main .content .dices > button {
+    width: 50px;
+    padding: 0.6rem;
+  }
+
+  .container main .content .dices > button > span {
+    font-size: 1.5rem;
+  }
+
+  .container main .content .roll {
+    padding: 0.8rem;
+  }
+
+  .container main .content .roll > span {
+    font-size: 1.1rem;
+  }
+}

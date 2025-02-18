@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Languages from './Languages.jsx';
 import AnsLetters from './AnsLetters.jsx';
 import Keyboard from './Keyboard.jsx';
@@ -72,7 +72,12 @@ export default function Main() {
   const wrongGuesses = keyPads.filter(
     (pad) => !ansString.includes(pad.value) && pad.isGuessed
   ).length;
+  const newGameSection = useRef(null)
 
+  useEffect(()=>{
+    if((wrongGuesses === maxAttempts) && newGameSection.current !== null){
+      newGameSection.current.scrollIntoView({behavior: 'smooth'})
+    }})
   function generateARandomWord() {
     return wordsArray[Math.floor(Math.random() * wordsArray.length)];
   }
@@ -238,7 +243,7 @@ export default function Main() {
       <div className="letters">{lettersPad}</div>
       <div className="board">{keyboardPads}</div>
       {(wrongGuesses === maxAttempts || allGuessed) && (
-        <button className="newGame" onClick={newGame}>
+        <button className="newGame" onClick={newGame} ref={newGameSection}>
           <span>New Game</span>
         </button>
       )}

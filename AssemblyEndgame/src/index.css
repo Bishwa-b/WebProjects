@@ -137,7 +137,7 @@ main > .languages > button > span {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #00ffea;
+  color: #1E1E1E;
   /* Removed text-shadow for a clean look */
 }
 
@@ -160,7 +160,7 @@ main > .languages > button > span {
   padding: 6px;
   border-radius: 4px;
   background: transparent;
-  color: #00ffea;
+  color: #1E1E1E;
   cursor: pointer;
   transition: background 0.3s ease;
 }

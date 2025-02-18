@@ -1,0 +1,278 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0d0d0d; /* Fallback color */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video Background */
+#bgvid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video sits behind content */
+}
+
+/* Main Container */
+main {
+  position: relative;
+  z-index: 1; /* Appear above the video */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(40, 39, 38, 0.95);
+  border: 2px solid #00ffea;
+  padding: 40px;
+  gap: 36px;
+  border-radius: 8px;
+}
+
+/* Header */
+main > header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+main > header > .heading {
+  text-align: center;
+  width: 100%;
+  gap: 4px;
+}
+
+main > header > .heading > h1 {
+  font-weight: 500;
+  font-size: 1.25rem; /* approx 20px */
+  line-height: 1.3;
+  color: #00ffea;
+  /* Removed text-shadow for a non-glowing look */
+}
+
+main > header > .heading > span {
+  font-weight: 500;
+  font-size: 0.875rem; /* approx 14px */
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+/* Message Container */
+main > header > .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 352px;
+  height: 49px;
+  padding: 6px;
+  gap: 6px;
+  border-radius: 4px;
+  background-color: #a91010;
+}
+
+main > header > .message > span {
+  color: #141414;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Languages Grid */
+main > .languages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 36px;
+}
+
+main > .languages > button {
+  font-family: 'Hanken Grotesk';
+  border: 1px solid #00ffea;
+  border-radius: 3px;
+  padding: 4.5px;
+  background-color: #1f1f1f;
+  color: #00ffea;
+  cursor: pointer;
+}
+
+main > .languages > button > span {
+  display: block;
+}
+
+/* Answer Letters */
+.letters {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.eachLetter {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border-bottom: 2px solid #00ffea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffea;
+  /* Removed text-shadow for a clean look */
+}
+
+/* Keyboard (Board) */
+.board {
+  width: 100%;
+  max-width: 480px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.board > button {
+  font-family: 'Hanken Grotesk', sans-serif;
+  border: 1px solid #00ffea;
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  background: transparent;
+  color: #00ffea;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.board > button:hover {
+  background: rgba(0, 255, 234, 0.2);
+}
+
+.board > button > span {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* New Game Button */
+.newGame {
+  width: 100%;
+  max-width: 228px;
+  height: 40px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #00ffea;
+  color: #141414;
+  border: none;
+  font-family: 'Hanken Grotesk';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.newGame > span {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  main {
+    padding: 30px;
+    gap: 24px;
+  }
+  
+  main > header > .heading > h1 {
+    font-size: 1.125rem; /* approx 18px */
+  }
+  
+  main > header > .heading > span {
+    font-size: 0.8125rem; /* approx 13px */
+  }
+  
+  .eachLetter {
+    width: 35px;
+    height: 35px;
+    padding: 4px;
+  }
+  
+  .board {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  main > header {
+    gap: 16px;
+  }
+  
+  main > header > .heading > h1 {
+    font-size: 1rem; /* approx 16px */
+  }
+  
+  main > header > .heading > span {
+    font-size: 0.75rem; /* approx 12px */
+  }
+  
+  .languages {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  
+  .eachLetter {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+  }
+  
+  .board {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    max-width: 100%;
+  }
+  
+  .newGame {
+    max-width: 100%;
+  }
+  
+  /* Adjust Message Container for Small Screens */
+  main > header > .message {
+    width: 90%;
+    max-width: none;
+  }
+}

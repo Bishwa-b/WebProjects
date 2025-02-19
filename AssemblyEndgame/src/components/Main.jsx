@@ -74,10 +74,7 @@ export default function Main() {
   ).length;
   const newGameSection = useRef(null)
 
-  useEffect(()=>{
-    if((wrongGuesses === maxAttempts) && newGameSection.current !== null){
-      newGameSection.current.scrollIntoView({behavior: 'smooth'})
-    }})
+  
   function generateARandomWord() {
     return wordsArray[Math.floor(Math.random() * wordsArray.length)];
   }
@@ -204,6 +201,11 @@ export default function Main() {
     .filter((pad) => ansString.includes(pad.value))
     .every((pad) => pad.isGuessed);
 
+  useEffect(()=>{
+    if((wrongGuesses === maxAttempts || isGuessed) && newGameSection.current !== null){
+      newGameSection.current.scrollIntoView({behavior: 'smooth'})
+    }},[wrongGuesses,isGuessed])
+  
   const newGame = () => {
     setKeyPads(generateAlphabetArray());
     setLang(generateLanguages());

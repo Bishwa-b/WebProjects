@@ -202,9 +202,9 @@ export default function Main() {
     .every((pad) => pad.isGuessed);
 
   useEffect(()=>{
-    if((wrongGuesses === maxAttempts || isGuessed) && newGameSection.current !== null){
+    if((wrongGuesses === maxAttempts || allGuessed) && newGameSection.current !== null){
       newGameSection.current.scrollIntoView({behavior: 'smooth'})
-    }},[wrongGuesses,isGuessed])
+    }},[wrongGuesses,allGuessed])
   
   const newGame = () => {
     setKeyPads(generateAlphabetArray());
